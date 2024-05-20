@@ -1,0 +1,28 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+h1, h2 {
+  color: #333;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin: 5px 0;  /* Reduce el margen para menos espacio entre elementos */
+  display: flex;  /* Establece el layout de los elementos `li` a flex */
+  align-items: center;  /* Alinea verticalmente los checkboxes con los nombres */
+}
+
+input[type="checkbox"] {
+  margin-right: 10px;  /* Añade espacio entre el checkbox y el nombre */
+}
+
+
+button {
+  margin-left: 10px;
+}
