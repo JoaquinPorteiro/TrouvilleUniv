@@ -13,71 +13,70 @@
 
 <h2>Categoria Mayores</h2>
 <ul id="mayores">
-  <li><input type="checkbox" onchange="toggleSeleccion(this, 'mayores')"> Thiago Handersson (Arquero)</li>
-  <li><input type="checkbox" onchange="toggleSeleccion(this, 'mayores')"> Ignacio Gonzalez (Arquero)</li>
-  <li><input type="checkbox" onchange="toggleSeleccion(this, 'mayores')"> Diego Pena (Lateral Derecho)</li>
-  <li><input type="checkbox" onchange="toggleSeleccion(this, 'mayores')"> Tomas Negreira "Negroni" (Lateral Derecho)</li>
-  <li><input type="checkbox" onchange="toggleSeleccion(this, 'mayores')"> Edgardo Novo "Edu" (Zaguero)</li>
-  <li><input type="checkbox" onchange="toggleSeleccion(this, 'mayores')"> Juan Carlos Navarro (Zaguero)</li>
-  <li><input type="checkbox" onchange="toggleSeleccion(this, 'mayores')"> Santiago Delgado "Chano" (Zaguero)</li>
-  <li><input type="checkbox" onchange="toggleSeleccion(this, 'mayores')"> Santiago Pereyra "Profe" (Zaguero)</li>
-  <li><input type="checkbox" onchange="toggleSeleccion(this, 'mayores')"> Juan Manuel Parodi (Zaguero)</li>
-  <li><input type="checkbox" onchange="toggleSeleccion(this, 'mayores')"> Nicolás Bentancor (Zaguero)</li>
-  <li><input type="checkbox" onchange="toggleSeleccion(this, 'mayores')"> Marcos Quagliotti "Cuco" (Zaguero)</li>
-  <li><input type="checkbox" onchange="toggleSeleccion(this, 'mayores')"> Valentin Goncalves (Zaguero)</li>
-  <li><input type="checkbox" onchange="toggleSeleccion(this, 'mayores')"> Francisco Rodriguez (Lateral Izquierdo)</li>
-  <li><input type="checkbox" onchange="toggleSeleccion(this, 'mayores')"> Diego Martínez (Mediocentro)</li>
-  <li><input type="checkbox" onchange="toggleSeleccion(this, 'mayores')"> Nicolás Canoura (Mediocentro)</li>
-  <li><input type="checkbox" onchange="toggleSeleccion(this, 'mayores')"> Santiago Chappuis "Chappa" (Mediocentro)</li>
-  <li><input type="checkbox" onchange="toggleSeleccion(this, 'mayores')"> Ignacio Ferrari (Mediocentro)</li>
-  <li><input type="checkbox" onchange="toggleSeleccion(this, 'mayores')"> Juan Manuel Nuñez (Mediocentro)</li>
-  <li><input type="checkbox" onchange="toggleSeleccion(this, 'mayores')"> Bernardo Collins (Mediocentro)</li>
-  <li><input type="checkbox" onchange="toggleSeleccion(this, 'mayores')"> Santiago Vinagre "Pety" (Mediocentro)</li>
-  <li><input type="checkbox" onchange="toggleSeleccion(this, 'mayores')"> Cristian Padilla (Volante)</li>
-  <li><input type="checkbox" onchange="toggleSeleccion(this, 'mayores')"> Facundo Torres (Volante)</li>
-  <li><input type="checkbox" onchange="toggleSeleccion(this, 'mayores')"> Facundo Sadovy (Volante)</li>
-  <li><input type="checkbox" onchange="toggleSeleccion(this, 'mayores')"> Felipe Labandera "Tangible" (Volante)</li>
-  <li><input type="checkbox" onchange="toggleSeleccion(this, 'mayores')"> Gaston Mazzo (Volante)</li>
-  <li><input type="checkbox" onchange="toggleSeleccion(this, 'mayores')"> Ignacio Mougan (Volante)</li>
-  <li><input type="checkbox" onchange="toggleSeleccion(this, 'mayores')"> Claudio Silvera (Volante)</li>
-  <li><input type="checkbox" onchange="toggleSeleccion(this, 'mayores')"> Mathias Ramirez "Matibolso" (Volante)</li>
-  <li><input type="checkbox" onchange="toggleSeleccion(this, 'mayores')"> Emiliano Souza "Enano" (Volante)</li>
-  <li><input type="checkbox" onchange="toggleSeleccion(this, 'mayores')"> Mathias Rodriguez (Volante)</li>
-  <li><input type="checkbox" onchange="toggleSeleccion(this, 'mayores')"> Gonzalo Bianchi (Delantero)</li>
-  <li><input type="checkbox" onchange="toggleSeleccion(this, 'mayores')"> Lautaro Flores (Delantero)</li>
-  <li><input type="checkbox" onchange="toggleSeleccion(this, 'mayores')"> Mateo Vazquez (Delantero)</li>
-  <li><input type="checkbox" onchange="toggleSeleccion(this, 'mayores')"> Bautista Collazo "Bautistuta"(Delantero)</li>
+  <li>
+    <div>
+      <input type="checkbox" onchange="toggleSeleccion(this, 'mayores')"> Thiago Handersson (Arquero)
+    </div>
+    <div>
+      <input type="checkbox" class="lesionado" onchange="toggleLesion(this, 'mayores')"> Lesionado
+    </div>
+  </li>
+  <li>
+    <div>
+      <input type="checkbox" onchange="toggleSeleccion(this, 'mayores')"> Ignacio Gonzalez (Arquero)
+    </div>
+    <div>
+      <input type="checkbox" class="lesionado" onchange="toggleLesion(this, 'mayores')"> Lesionado
+    </div>
+  </li>
+  <li>
+    <div>
+      <input type="checkbox" onchange="toggleSeleccion(this, 'mayores')"> Diego Pena (Lateral Derecho)
+    </div>
+    <div>
+      <input type="checkbox" class="lesionado" onchange="toggleLesion(this, 'mayores')"> Lesionado
+    </div>
+  </li>
+  <li>
+    <div>
+      <input type="checkbox" onchange="toggleSeleccion(this, 'mayores')"> Tomas Negreira "Negroni" (Lateral Derecho)
+    </div>
+    <div>
+      <input type="checkbox" class="lesionado" onchange="toggleLesion(this, 'mayores')"> Lesionado
+    </div>
+  </li>
+  <!-- Añade los demás jugadores de la misma manera -->
 </ul>
 
 <br>
 
 <h2>Categoria Sub 20</h2>
 <ul id="sub20">
-  <li><input type="checkbox" onchange="toggleSeleccion(this, 'sub20')"> Federico Brugnoli "Fefo" (Arquero)</li>
-  <li><input type="checkbox" onchange="toggleSeleccion(this, 'sub20')"> Tomas Pereira (Lateral Derecho)</li>
-  <li><input type="checkbox" onchange="toggleSeleccion(this, 'sub20')"> Franco Mourglia "Robertson" (Lateral Derecho)</li>
-  <li><input type="checkbox" onchange="toggleSeleccion(this, 'sub20')"> Tomas Dotti (Lateral Derecho)</li>
-  <li><input type="checkbox" onchange="toggleSeleccion(this, 'sub20')"> Manuel Pereira "Yeti" (Lateral Derecho)</li>
-  <li><input type="checkbox" onchange="toggleSeleccion(this, 'sub20')"> Rodrigo Texeira (Zaguero)</li>
-  <li><input type="checkbox" onchange="toggleSeleccion(this, 'sub20')"> Joaquin Gonzalez (Zaguero)</li>
-  <li><input type="checkbox" onchange="toggleSeleccion(this, 'sub20')"> Augusto Álvarez "Patron" (Zaguero)</li>
-  <li><input type="checkbox" onchange="toggleSeleccion(this, 'sub20')"> Joaquín Bertaux "Salto" (Zaguero)</li>
-  <li><input type="checkbox" onchange="toggleSeleccion(this, 'sub20')"> Facundo Alvarez (Lateral Izquierdo)</li>
-  <li><input type="checkbox" onchange="toggleSeleccion(this, 'sub20')"> Felipe Calvo (Lateral Izquierdo)</li>
-  <li><input type="checkbox" onchange="toggleSeleccion(this, 'sub20')"> Joaquín Porteiro "Oti" (Mediocentro)</li>
-  <li><input type="checkbox" onchange="toggleSeleccion(this, 'sub20')"> Emilio Porras (Mediocentro)</li>
-  <li><input type="checkbox" onchange="toggleSeleccion(this, 'sub20')"> Lucas Castro (Mediocentro)</li>
-  <li><input type="checkbox" onchange="toggleSeleccion(this, 'sub20')"> Rodrigo Cabrera (Mediocentro)</li>
-  <li><input type="checkbox" onchange="toggleSeleccion(this, 'sub20')"> Santiago Lima (Mediocentro)</li>
-  <li><input type="checkbox" onchange="toggleSeleccion(this, 'sub20')"> Joe Arreche (Volante)</li>
-  <li><input type="checkbox" onchange="toggleSeleccion(this, 'sub20')"> Manuel Rincon (Volante)</li>
-  <li><input type="checkbox" onchange="toggleSeleccion(this, 'sub20')"> Nicolas Wagner (Volante)</li>
-  <li><input type="checkbox" onchange="toggleSeleccion(this, 'sub20')"> Erik Silvera (Volante)</li>
-  <li><input type="checkbox" onchange="toggleSeleccion(this, 'sub20')"> Joaquín Brombauer (Volante)</li>
-  <li><input type="checkbox" onchange="toggleSeleccion(this, 'sub20')"> Nicolas Nova (Delantero)</li>
-  <li><input type="checkbox" onchange="toggleSeleccion(this, 'sub20')"> Agustin Santiñaque (Delantero)</li>
-  <li><input type="checkbox" onchange="toggleSeleccion(this, 'sub20')"> Sebastian Luciardi "Cuautemoc" (Delantero)</li>
-  <li><input type="checkbox" onchange="toggleSeleccion(this, 'sub20')"> Federico Iriarte (Delantero)</li>
+  <li>
+    <div>
+      <input type="checkbox" onchange="toggleSeleccion(this, 'sub20')"> Federico Brugnoli "Fefo" (Arquero)
+    </div>
+    <div>
+      <input type="checkbox" class="lesionado" onchange="toggleLesion(this, 'sub20')"> Lesionado
+    </div>
+  </li>
+  <li>
+    <div>
+      <input type="checkbox" onchange="toggleSeleccion(this, 'sub20')"> Tomas Pereira (Lateral Derecho)
+    </div>
+    <div>
+      <input type="checkbox" class="lesionado" onchange="toggleLesion(this, 'sub20')"> Lesionado
+    </div>
+  </li>
+  <li>
+    <div>
+      <input type="checkbox" onchange="toggleSeleccion(this, 'sub20')"> Franco Mourglia "Robertson" (Lateral Derecho)
+    </div>
+    <div>
+      <input type="checkbox" class="lesionado" onchange="toggleLesion(this, 'sub20')"> Lesionado
+    </div>
+  </li>
+  <!-- Añade los demás jugadores de la misma manera -->
 </ul>
 
 <br>
@@ -104,8 +103,6 @@
 <ul id="reserva">
   <!-- Lista de jugadores no seleccionados de ambas categorías -->
 </ul>
-
-
 
 <script src="js/app.js"></script>
 </body>

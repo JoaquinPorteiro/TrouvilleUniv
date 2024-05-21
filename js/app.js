@@ -1,8 +1,14 @@
 function toggleSeleccion(checkbox, categoria) {
   const li = checkbox.parentElement;
+  const lesionadoCheckbox = li.querySelector('.lesionado');
   const listaSeleccionados = document.getElementById(`seleccionados${capitalizeFirstLetter(categoria)}`);
   const fullText = li.textContent.trim();
   const playerName = fullText.split(' (')[0];  // Extraer solo el nombre del jugador
+
+  if (lesionadoCheckbox.checked) {
+    checkbox.checked = false; // No permitir selección si está lesionado
+    return;
+  }
 
   if (checkbox.checked) {
     const selectedLi = document.createElement("li");
@@ -15,6 +21,18 @@ function toggleSeleccion(checkbox, categoria) {
       selectedLi.remove();
     }
   }
+  mostrarReserva(); // Actualizar la lista de reserva
+}
+
+function toggleLesion(checkbox, categoria) {
+  const li = checkbox.parentElement;
+  const seleccionCheckbox = li.querySelector('input[type="checkbox"]:not(.lesionado)');
+
+  if (checkbox.checked) {
+    seleccionCheckbox.checked = false; // Desmarcar selección si está lesionado
+    toggleSeleccion(seleccionCheckbox, categoria); // Asegurar la lógica de deselección
+  }
+  mostrarReserva(); // Actualizar la lista de reserva
 }
 
 function toggleReserva() {
@@ -29,18 +47,22 @@ function toggleReserva() {
 }
 
 function mostrarReserva() {
-  const mayores = Array.from(document.getElementById('mayores').querySelectorAll('li input:not(:checked)'));
-  const sub20 = Array.from(document.getElementById('sub20').querySelectorAll('li input:not(:checked)'));
   const reserva = document.getElementById('reserva');
-  reserva.innerHTML = '';
+  reserva.innerHTML = ''; // Limpiar la lista de reserva
 
-  mayores.concat(sub20).forEach(input => {
-    const li = input.closest('li');
-    const fullText = li.textContent.trim();
-    const playerName = fullText.split(' (')[0];
-    const newLi = document.createElement("li");
-    newLi.textContent = fullText;  // Aquí se muestra el nombre y la posición en la lista de reserva
-    reserva.appendChild(newLi);
+  const mayores = Array.from(document.getElementById('mayores').querySelectorAll('li'));
+  const sub20 = Array.from(document.getElementById('sub20').querySelectorAll('li'));
+
+  mayores.concat(sub20).forEach(li => {
+    const seleccionCheckbox = li.querySelector('input[type="checkbox"]:not(.lesionado)');
+    const lesionadoCheckbox = li.querySelector('.lesionado');
+    if (!seleccionCheckbox.checked && !lesionadoCheckbox.checked) { // Solo si no está seleccionado ni lesionado
+      const fullText = li.textContent.trim();
+      const playerName = fullText.split(' (')[0];
+      const newLi = document.createElement("li");
+      newLi.textContent = playerName; // Solo mostrar el nombre
+      reserva.appendChild(newLi);
+    }
   });
 }
 
