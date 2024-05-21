@@ -35,13 +35,26 @@ function toggleSeleccion(checkbox, categoria) {
 function toggleLesion(checkbox, categoria) {
   const li = checkbox.closest('li');
   const seleccionCheckbox = li.querySelector('input[type="checkbox"]:not(.lesionado)');
+  const fullText = li.textContent.trim();
+  const playerName = fullText.split(' (')[0];  // Extraer solo el nombre del jugador
+  const listaLesionados = document.getElementById('lesionados');
 
   if (checkbox.checked) {
     seleccionCheckbox.checked = false; // Desmarcar selección si está lesionado
     toggleSeleccion(seleccionCheckbox, categoria); // Asegurar la lógica de deselección
+    const lesionadoLi = document.createElement("li");
+    lesionadoLi.textContent = playerName;
+    lesionadoLi.id = `lesionado-${playerName}`;
+    listaLesionados.appendChild(lesionadoLi);
+  } else {
+    const lesionadoLi = document.getElementById(`lesionado-${playerName}`);
+    if (lesionadoLi) {
+      lesionadoLi.remove();
+    }
   }
   mostrarReserva(); // Actualizar la lista de reserva
 }
+
 
 function toggleReserva() {
   const checkbox = document.getElementById('toggleReserva');
