@@ -1,3 +1,7 @@
+#reserva {
+  display: none;
+}
+
 body {
   font-family: Arial, sans-serif;
   margin: 20px;
@@ -26,3 +30,14 @@ input[type="checkbox"] {
 button {
   margin-left: 10px;
 }
+
+.lesionado-wrapper {
+  margin-left: 15px; /* Ajusta el margen izquierdo según lo necesario */
+}
+
+.lesionado-text {
+  font-weight: bold;
+}
+
+
+

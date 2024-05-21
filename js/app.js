@@ -1,5 +1,13 @@
+document.addEventListener('DOMContentLoaded', (event) => {
+  const checkbox = document.getElementById('toggleReserva');
+  const reserva = document.getElementById('reserva');
+  if (!checkbox.checked) {
+    reserva.style.display = 'none';
+  }
+});
+
 function toggleSeleccion(checkbox, categoria) {
-  const li = checkbox.parentElement;
+  const li = checkbox.closest('li');
   const lesionadoCheckbox = li.querySelector('.lesionado');
   const listaSeleccionados = document.getElementById(`seleccionados${capitalizeFirstLetter(categoria)}`);
   const fullText = li.textContent.trim();
@@ -25,7 +33,7 @@ function toggleSeleccion(checkbox, categoria) {
 }
 
 function toggleLesion(checkbox, categoria) {
-  const li = checkbox.parentElement;
+  const li = checkbox.closest('li');
   const seleccionCheckbox = li.querySelector('input[type="checkbox"]:not(.lesionado)');
 
   if (checkbox.checked) {
